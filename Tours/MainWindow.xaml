@@ -1,0 +1,15 @@
+﻿<Window x:Class="Tours.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Клиенты" Height="350" Width="525">
+    <Grid>
+        <DataGrid x:Name="dgClients" VerticalAlignment="Top" Margin="0,0,0.4,0" Height="19" AutoGenerateColumns="False" Visibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Path=Adress}"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Path=Number}"/>       
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="21,281,0,0" VerticalAlignment="Top" Width="82" Click="btnAdd_Click" Height="30"/>
+    </Grid>
+</Window>
